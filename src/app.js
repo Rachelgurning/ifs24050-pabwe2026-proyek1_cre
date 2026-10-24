@@ -10,7 +10,7 @@ const JSON_BODY_LIMIT = '10kb';
 // Origin yang selalu diizinkan: frontend produksi (Vercel) dan frontend lokal.
 // Origin tambahan dapat diatur lewat environment variable CORS_ORIGINS (pisahkan dengan koma).
 const DEFAULT_ORIGINS = [
-  'https://ifs24050-pabwe2026-proyek1-fe.vercel.app',
+  'https://ifs24050-pabwe2026-proyek1-fre.vercel.app',
   'http://localhost:3000',
   'http://localhost:5173',
 ];
