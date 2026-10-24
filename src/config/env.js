@@ -28,11 +28,11 @@ function readList(value, fallback) {
 export const env = Object.freeze({
   nodeEnv: process.env.NODE_ENV ?? 'development',
   isProduction,
-  port: Number(process.env.PORT) || 3000,
+  port: Number(process.env.PORT) || 8000,
   jwtSecret: readJwtSecret(),
   jwtExpiresIn: process.env.JWT_EXPIRES_IN ?? '8h',
   dbPath: process.env.DB_PATH ?? 'data/votedel.sqlite',
-  corsOrigins: readList(process.env.CORS_ORIGINS, 'http://localhost:5173'),
+  corsOrigins: readList(process.env.CORS_ORIGINS, 'http://localhost:3000'),
   trustProxy: process.env.TRUST_PROXY === 'true',
   seedOnStart: process.env.SEED_ON_START !== 'false',
   adminPassword: process.env.ADMIN_PASSWORD ?? 'Admin#12345',

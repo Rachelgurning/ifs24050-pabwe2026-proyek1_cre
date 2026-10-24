@@ -1,7 +1,12 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { DatabaseSync } from 'node:sqlite';
+import { createRequire } from 'node:module';
 import { SCHEMA_SQL } from './schema.js';
+
+// node:sqlite dimuat lewat createRequire agar tidak di-resolve oleh bundler
+// (Vite/Vitest memotong awalan "node:" dan gagal menemukan modul eksperimental ini).
+const nodeRequire = createRequire(import.meta.url);
+const { DatabaseSync } = nodeRequire('node:sqlite');
 
 export const IN_MEMORY_DB = ':memory:';
 

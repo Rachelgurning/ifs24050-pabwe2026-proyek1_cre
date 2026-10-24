@@ -1,6 +1,31 @@
-﻿node_modules/
+# dependencies (bun install)
+node_modules
+
+# database SQLite lokal
+data
+
+# code coverage
+coverage
+*.lcov
+
+# logs
+logs
+*.log
+
+# dotenv environment variable files
 .env
-data/*.db
-data/*.sqlite
-data/*.sqlite3
-coverage/
+.env.local
+.env.production.local
+
+# caches
+.eslintcache
+.scannerwork
+.trivy-cache
+
+# build artefak Jenkins
+latest-app.zip
+trivy-results.sarif
+
+# IDE & OS
+.idea
+.DS_Store
